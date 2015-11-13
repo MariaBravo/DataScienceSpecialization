@@ -1,0 +1,10 @@
+sample.interval=20000
+"grep" "<Anonymous>" "sort" "<Anonymous>" 
+"dirname" "print.help_files_with_topic" "print" "<Anonymous>" 
+"grepl" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"gzfile" "readRDS" "lazyLoadDBexec" "<Anonymous>" "<Anonymous>" "prepare_Rd" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"lazyLoadDBfetch" "fetch" "fun" "lazyLoadDBexec" "<Anonymous>" "<Anonymous>" "prepare_Rd" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"psub" "addParaBreaks" "writeLines" "writeLinesUTF8" "of1" "writeBlock" "writeContent" "writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"psub" "addParaBreaks" "writeLines" "writeLinesUTF8" "of1" "writeBlock" "writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"psub" "htmlify" "isBlankLineRd" "addParaBreaks" "writeLines" "writeLinesUTF8" "of1" "writeBlock" "writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 
+"psub" "addParaBreaks" "writeLines" "writeLinesUTF8" "of1" "writeBlock" "writeContent" "writeSection" "Rd2HTML" "<Anonymous>" "doTryCatch" "tryCatchOne" "tryCatchList" "tryCatch" "try" 

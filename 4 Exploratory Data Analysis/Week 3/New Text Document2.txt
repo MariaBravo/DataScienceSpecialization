@@ -1,0 +1,57 @@
+read from the zip file???
+
+f <- tempfile()
+download.file("http://[...]/srcFile.csv.bz2", f)
+srcData <- read.csv(bzfile(f))
+
+
+*******
+
+Does the analysis include description and justification for any data transformations?" 
+**************
+
+"Prop. Damage Exp.; expressed in dollar unit type"
+
+I am guessing Exp. Is Exponent. Now, I agree that in a number of cases this makes no sense, but I think that reflects contamination and mistakes in the data.
+
+The documentation suggests when Prop Damage is numeric it is (prop damage) * 10^(prop damage exp)
+********************
+
+Here are some more that don't make any sense.  Exponents in 0..9 but PROPDMG is 0. If PROPDMG is 0, why bother specifying an exponent? 
+
+> head(subset(stormData, PROPDMG == 0 & PROPDMGEXP %in% seq("0":"9"), select=c(PROPDMG, PROPDMGEXP)))
+       PROPDMG PROPDMGEXP
+192527       0          5
+195672       0          5
+199528       0          2
+200331       0          3
+200372       0          2
+200416       0          2
+
+
+the IRE, in the free sample data of their purchasable cleaned up version of the storm database seem to have determined, by means unknown, that 0 K corresponds to 0 damage and it is from location that was entering it's damage in units of one thousand.
+
+**-------------------
+
+I have a look at the NCDC annual summaries reports, I think we can follow the grouping in the report.
+
+1. we can group the events types into six big category events: 
+    convection, extreme temperature, flood, marine,tropical cyclones, winter and other.
+2. or we can group them into more defined events:
+   lightning, tornado, thunderstorm wind, hail, cold, heat, flash flood, river flood, coastal storm, tsunami,
+   rip current, tropical storm/hurricane, winter storm, ice, avalanche, drought, dust storm, dust devil, rain, fog
+   high wind, etc...
+
+
+*------------------
+
+
+
+
+
+The distribution of the RDIs themselves is not normally distributed.  That is, if you made a graph with number of RDIs along the horizontal axis, and percent of people having that number of RDIs on the vertical axis, it won't look like a bell curve.
+
+But the distribution of sample means for samples of size n=100, is approximately normal, due to the high value of n in the samples whose means form the basis of the distribution.
+
+If you take a sample of 100 people, and calculate the mean, that is one data point in the distribution of sample means.  You can calculate where you expect that data point to lie, using the mean and standard deviation of the distribution of sample means.
+

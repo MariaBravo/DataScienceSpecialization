@@ -1,0 +1,34 @@
+yrange <- range(c(bal_dat, la_dat))
+
+pie_fatalities <- ggplot(resume, aes(x = factor(1), y = Fatalities, fill = factor(Event_Types))) + 
+    geom_bar(width = 1)
+pie_fatalities <- pie_fatalities + coord_polar(theta = "y") + xlab("Fatalities") + 
+    ylab("Total cases across 1950-2011: 16,177") + labs(fill = "Event Types")
+pie_fatalities
+
+options(rpubs.upload.method = "internal")
+opts_knit$set(width = 90)
+
+
+
+
+Since we are doing the analysis, we can specify how we define a motor vehicle, since there's no well established standard.
+In my study I have chosen to define motor vehicles as ON-ROAD for simplicity.
+
+
+There is another way, from this old posting:
+https://stat.ethz.ch/pipermail/r-devel/2003-May/026485.html
+"R will penalize the scientific notation version by 3 characters, and will print
+"100000" in this example because 5+3 >= 6.  ("scipen" = "scientific notation
+penalty".)  Setting e.g. options(scipen=999) will prevent effectively all
+scientific notation."
+
+So compare 
+
+plot(10^(1:6), 10^(1:6))
+
+
+vs
+
+options(scipen=999)
+plot(10^(1:6), 10^(1:6))

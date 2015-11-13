@@ -1,0 +1,32 @@
+    The explanation is as important as the script, so make sure you have the readme
+    have you combined the training and test x and y into one block, given them headings, and turned the numeric activities into something easier to read.
+    have you extracted some variables to do with mean and standard deviation from the full set
+    have you explained what those variables are and your criteria for picking them in the readme
+    have you gotten the average of each variable for each combination of subject and activity and saved the data frame of this as a set of tidy data
+    have you loaded up your current script, an up to date readme! and your tidy data
+
+
+"for the purposes of this analysis, the variables were defined as.
+
+When I did the assignment, I cleaned up the variable names.
+I explained in my readme that since they were all the average of the values I had not included that aspect in the variable names. Either way works, huts make it clear what you have done.
+
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive activity names.
+
+
+If you are wanting to know the way most people shaped their output, it was column for subject, a column for activity, and columns for each summary variable (so 6*30 as each row represents a unique combination of subject and activity)
+
+
+you should state your assumptions.
+1) We assume that the files are in a Zip format at url xxxxx and proceed to download and extract to a convenient local directory.
+2) We assume that files have been downloard and extracted to a local directory.
+
+
+g <- split(UCIDATA[,5:565], list(UCIDATA$Activity, UCIDATA$Subject))
+Splitdata <- sapply(g, colMeans)
+
+The tidy data file goes to coursera. The code for creating it goes to GitHub.
+
+
+
